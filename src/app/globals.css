@@ -1,3 +1,4 @@
+
 /* Reset default styles */
 body, h1, h2, a {
   margin: 0;
@@ -72,6 +73,24 @@ h2 {
 
 .button-class:hover {
   background-color: #5cd9db;
+}
+.button-class2 {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #888888;
+  color: #ececec;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Inter', serif;
+  font-style: normal;
+  transition: background-color 0.3s ease;
+  margin: 2px;
+}
+
+.button-class2:hover {
+  background-color: #252525;
 }
 
 /* Make it responsive */
@@ -169,4 +188,173 @@ footer ul li a:hover {
 
 .navbar-menu a:hover {
   text-decoration: underline;
+}
+
+/* Movie container styling */
+.movie-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Grid layout for movies */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Individual movie card */
+.movie-card {
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Movie poster styling */
+.movie-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Movie details */
+.movie-details {
+  padding: 15px;
+}
+
+.movie-details h2 {
+  font-size: 1.2rem;
+  color: #48A6A7;
+  margin-bottom: 10px;
+}
+
+.movie-details p {
+  font-size: 0.9rem;
+  color: #6c757d;
+  line-height: 1.4;
+  text-align: justify;
+}
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  color: #48A6A7;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.6;
+}
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Changed to exactly 4 columns */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Adjust movie card size */
+.movie-card {
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100%; /* Ensure card takes full width of grid cell */
+}
+
+/* Adjust movie poster height */
+.movie-image {
+  width: 100%;
+  height: 300px; /* Slightly reduced height */
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Modal Content - adjusted size */
+.modal-content {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 70%; /* Reduced from 90% */
+  max-width: 500px; /* Reduced from 600px */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  text-align: center;
+  position: relative;
+  max-height: 90vh; /* Add max height */
+  overflow-y: auto; /* Add scroll if content is too long */
+}
+
+/* Modal image size adjustment */
+.modal-image {
+  width: auto; /* Changed from 100% */
+  max-width: 100%;
+  max-height: 400px; /* Add max height for images */
+  height: auto;
+  margin: 20px 0;
+  object-fit: contain;
+}
+
+/* Add responsive adjustment for smaller screens */
+@media (max-width: 1200px) {
+  .movie-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
 }
